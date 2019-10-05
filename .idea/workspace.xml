@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2a6bc41-b180-462a-9674-3c7907bb7be9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,30 +13,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="207" column="43" lean-forward="true" selection-start-line="207" selection-start-column="43" selection-end-line="207" selection-end-column="43" />
+            <state relative-caret-position="588">
+              <caret line="209" column="44" selection-start-line="209" selection-start-column="44" selection-end-line="209" selection-end-column="44" />
               <folding>
-                <element signature="e#9479#9485#0" expanded="true" />
-                <element signature="e#9485#9491#0" expanded="true" />
-                <element signature="e#9595#9601#0" expanded="true" />
-                <element signature="e#9601#9607#0" expanded="true" />
-                <element signature="e#9613#9619#0" expanded="true" />
-                <element signature="e#9619#9625#0" expanded="true" />
-                <element signature="e#9662#9668#0" expanded="true" />
-                <element signature="e#9668#9674#0" expanded="true" />
-                <element signature="e#10197#10203#0" expanded="true" />
-                <element signature="e#10203#10209#0" expanded="true" />
-                <element signature="e#10313#10319#0" expanded="true" />
-                <element signature="e#10319#10325#0" expanded="true" />
-                <element signature="e#10453#10459#0" expanded="true" />
-                <element signature="e#10459#10465#0" expanded="true" />
-                <element signature="e#10499#10505#0" expanded="true" />
-                <element signature="e#10505#10511#0" expanded="true" />
-                <element signature="e#24055#24061#0" expanded="true" />
-                <element signature="e#24068#24074#0" expanded="true" />
+                <element signature="e#9522#9528#0" expanded="true" />
+                <element signature="e#9528#9534#0" expanded="true" />
+                <element signature="e#9638#9644#0" expanded="true" />
+                <element signature="e#9644#9650#0" expanded="true" />
+                <element signature="e#9778#9784#0" expanded="true" />
+                <element signature="e#9784#9790#0" expanded="true" />
+                <element signature="e#9824#9830#0" expanded="true" />
+                <element signature="e#9830#9836#0" expanded="true" />
+                <element signature="e#10378#10384#0" expanded="true" />
+                <element signature="e#10384#10390#0" expanded="true" />
+                <element signature="e#10520#10526#0" expanded="true" />
+                <element signature="e#10526#10532#0" expanded="true" />
+                <element signature="e#10710#10716#0" expanded="true" />
+                <element signature="e#10716#10722#0" expanded="true" />
+                <element signature="e#10750#10756#0" expanded="true" />
+                <element signature="e#10756#10762#0" expanded="true" />
+                <element signature="e#26528#26534#0" expanded="true" />
+                <element signature="e#26541#26547#0" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -54,8 +55,17 @@
                 <element signature="n#style#0;n#span#0;n#div#19;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#20;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#21;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#32495#32501#0" expanded="true" />
+                <element signature="e#35628#35634#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -104,6 +114,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -124,17 +135,6 @@
             <path>
               <item name="akashzcoder.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="akashzcoder.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="akashzcoder.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akashzcoder.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="akashzcoder.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="akashzcoder.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -204,7 +204,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -220,7 +220,7 @@
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32914045" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32914045" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -242,27 +242,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="207" column="43" lean-forward="true" selection-start-line="207" selection-start-column="43" selection-end-line="207" selection-end-column="43" />
+        <state relative-caret-position="588">
+          <caret line="209" column="44" selection-start-line="209" selection-start-column="44" selection-end-line="209" selection-end-column="44" />
           <folding>
-            <element signature="e#9479#9485#0" expanded="true" />
-            <element signature="e#9485#9491#0" expanded="true" />
-            <element signature="e#9595#9601#0" expanded="true" />
-            <element signature="e#9601#9607#0" expanded="true" />
-            <element signature="e#9613#9619#0" expanded="true" />
-            <element signature="e#9619#9625#0" expanded="true" />
-            <element signature="e#9662#9668#0" expanded="true" />
-            <element signature="e#9668#9674#0" expanded="true" />
-            <element signature="e#10197#10203#0" expanded="true" />
-            <element signature="e#10203#10209#0" expanded="true" />
-            <element signature="e#10313#10319#0" expanded="true" />
-            <element signature="e#10319#10325#0" expanded="true" />
-            <element signature="e#10453#10459#0" expanded="true" />
-            <element signature="e#10459#10465#0" expanded="true" />
-            <element signature="e#10499#10505#0" expanded="true" />
-            <element signature="e#10505#10511#0" expanded="true" />
-            <element signature="e#24055#24061#0" expanded="true" />
-            <element signature="e#24068#24074#0" expanded="true" />
+            <element signature="e#9522#9528#0" expanded="true" />
+            <element signature="e#9528#9534#0" expanded="true" />
+            <element signature="e#9638#9644#0" expanded="true" />
+            <element signature="e#9644#9650#0" expanded="true" />
+            <element signature="e#9778#9784#0" expanded="true" />
+            <element signature="e#9784#9790#0" expanded="true" />
+            <element signature="e#9824#9830#0" expanded="true" />
+            <element signature="e#9830#9836#0" expanded="true" />
+            <element signature="e#10378#10384#0" expanded="true" />
+            <element signature="e#10384#10390#0" expanded="true" />
+            <element signature="e#10520#10526#0" expanded="true" />
+            <element signature="e#10526#10532#0" expanded="true" />
+            <element signature="e#10710#10716#0" expanded="true" />
+            <element signature="e#10716#10722#0" expanded="true" />
+            <element signature="e#10750#10756#0" expanded="true" />
+            <element signature="e#10756#10762#0" expanded="true" />
+            <element signature="e#26528#26534#0" expanded="true" />
+            <element signature="e#26541#26547#0" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -281,8 +281,15 @@
             <element signature="n#style#0;n#span#0;n#div#19;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#20;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#21;n#div#0;n#div#1;n#section#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#32495#32501#0" expanded="true" />
+            <element signature="e#35628#35634#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
