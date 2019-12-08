@@ -71,15 +71,61 @@
                             <div class="photo">
                                 <img src="img/20python_lib.png" alt="python" border="1" height="256" width="256">
                             </div>
-                            <div class="info">
+                            <    class="info">
                                 <h2>
                                     20 Python Libraries You Aren't Using!
                                 </h2>
                                 <h6>
-                                    Author: Akash Singh  <br/>Date: December 20, 2019
+                                    Author: Akash Singh <br/>Date: December 20, 2019
                                 </h6>
-                                <p>
-                                    content here
+                                <br><br>
+                                <p style="color:black;font-size:20px;">
+                                    I have been using Python for quite a while now, still learning a lot of simple and
+                                    new things. Sometimes these simple things saves time and bring a lot of joy to me. I
+                                    will be sharing a breif overview of the book:
+                                <blockquote><q>20 Python Libraries You Aren't Using
+                                    (But Should)</q> - <b>Caleb Hattingh</b></blockquote>
+                            <p style="color:black;font-size:20px;">This book primarily focuses on some of the lesser-known libraries from the third-party ecosystem.</p>
+                            <ol>Libraries</ol>
+                                <ul style="color:black;font-size:20px;">
+                                    <li>collections.OrderedDict: gives you a <i>dict</i> that maintains the order of
+                                        insertion.
+                                    </li>
+                                    <li>collections.defaultdict: allows you to specify a default value to all new
+                                        keys.
+                                    </li>
+                                    For example:
+                                        <pre>
+                                            <code>
+            >>> import collections
+            >>> d = collections.defaultdict(list)
+            >>> d['random_key']
+            []  # output -> auto-initilized to list
+                                            </code>
+                                        </pre>
+                                    <li>collections.namedtuple: namedtuple incurs no extra runtime cost and can make your much easier to read.</li>
+                                    <pre>
+                                        <code>
+            >>> point = (1.0, 2.0)
+            >>> from collections import namedtuple
+            >>> point_using_named_tuple = namedtuple('Point', 'x_axis, y_axis')
+            >>> point_tuple = Point(x_axis=1.0, y_axis=2.0)
+            >>> point_tuple.x_axis
+            1.0
+                                        </code>
+                                    </pre>
+                                    <li>contextlib: context manager is what simplifies cleanup step. It is what you use with the <i>with</i> statement. You can use the <i>contextmanager</i> decorator from the contextlib libary to create your own context manager.</li>
+                                    Though the default, “low level” way to make a context manager is to make a class which follows the context management protocol, by implementing <i>__enter__</i> and <i>__exit__</i> methods, the simplest way is using the contextmanager decorator from the contextlib library, and invoking yield in your context manager function in between the setup and teardown steps.
+                                    <pre>
+                                        <code>
+                                            @contextmanager
+
+                                        </code>
+                                    </pre>
+                                    <li>concurrent.futures: </li>
+                                    <li>logging</li>
+                                    <li>sched</li>
+                                </ul>
 
                                 </p>
                             </div>
