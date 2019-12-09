@@ -71,23 +71,24 @@
                             <div class="photo">
                                 <img src="img/20python_lib.png" alt="python" border="1" height="256" width="256">
                             </div>
-                            <    class="info">
-                                <h2>
-                                    20 Python Libraries You Aren't Using!
-                                </h2>
-                                <h6>
-                                    Author: Akash Singh <br/>Date: December 20, 2019
-                                </h6>
-                                <br><br>
-                                <p style="color:black;font-size:20px;">
-                                    I have been using Python for quite a while now, still learning a lot of simple and
-                                    new things. Sometimes these simple things saves time and bring a lot of joy to me. I
-                                    will be sharing a breif overview of the book:
-                                <blockquote><q>20 Python Libraries You Aren't Using
-                                    (But Should)</q> - <b>Caleb Hattingh</b></blockquote>
-                            <p style="color:black;font-size:20px;">This book primarily focuses on some of the lesser-known libraries from the third-party ecosystem.</p>
-                            <ol>Libraries</ol>
-                                <ul style="color:black;font-size:20px;">
+                            <h2>
+                                20 Python Libraries You Aren't Using!
+                            </h2>
+                            <h6>
+                                Author: Akash Singh <br/>Date: December 20, 2019
+                            </h6>
+                            <br><br>
+                            <p style="color:black;font-size:18px;">
+                                I have been using Python for quite a while now, still learning a lot of simple and
+                                new things. Sometimes these simple things saves time and bring a lot of joy to me. I
+                                will be sharing a breif overview of the book:
+                            <blockquote><q>20 Python Libraries You Aren't Using
+                                (But Should)</q> - <b>Caleb Hattingh</b></blockquote>
+                            <p style="color:black;font-size:px;">This book primarily focuses on some of the
+                                lesser-known libraries from the third-party ecosystem.</p>
+                            <ol style="color:black;font-size:18px;">Libraries
+                                <li>Standard Library</li>16
+                                <ul style="color:black;font-size:18px;">
                                     <li>collections.OrderedDict: gives you a <i>dict</i> that maintains the order of
                                         insertion.
                                     </li>
@@ -95,7 +96,7 @@
                                         keys.
                                     </li>
                                     For example:
-                                        <pre>
+                                    <pre>
                                             <code>
             >>> import collections
             >>> d = collections.defaultdict(list)
@@ -103,7 +104,9 @@
             []  # output -> auto-initilized to list
                                             </code>
                                         </pre>
-                                    <li>collections.namedtuple: namedtuple incurs no extra runtime cost and can make your much easier to read.</li>
+                                    <li>collections.namedtuple: namedtuple incurs no extra runtime cost and can make
+                                        your much easier to read.
+                                    </li>
                                     <pre>
                                         <code>
             >>> point = (1.0, 2.0)
@@ -114,34 +117,59 @@
             1.0
                                         </code>
                                     </pre>
-                                    <li>contextlib: context manager is what simplifies cleanup step. It is what you use with the <i>with</i> statement. You can use the <i>contextmanager</i> decorator from the contextlib libary to create your own context manager.</li>
-                                    Though the default, “low level” way to make a context manager is to make a class which follows the context management protocol, by implementing <i>__enter__</i> and <i>__exit__</i> methods, the simplest way is using the contextmanager decorator from the contextlib library, and invoking yield in your context manager function in between the setup and teardown steps.
+                                    <li>contextlib: context manager is what simplifies cleanup step. It is what you use
+                                        with the <i>with</i> statement. You can use the <i>contextmanager</i> decorator
+                                        from the contextlib libary to create your own context manager.
+                                    </li>
+                                    Though the default, “low level” way to make a context manager is to make a class
+                                    which follows the context management protocol, by implementing <i>__enter__</i> and
+                                    <i>__exit__</i> methods, the simplest way is using the contextmanager decorator from
+                                    the contextlib library, and invoking yield in your context manager function in
+                                    between the setup and teardown steps.
                                     <pre>
                                         <code>
                                             @contextmanager
 
                                         </code>
                                     </pre>
-                                    <li>concurrent.futures: </li>
+                                    <li>concurrent.futures:</li>
                                     <li>logging</li>
                                     <li>sched</li>
                                 </ul>
+                                <li>Command-Line Applications:</li>
+                                <ol>
+                                    <li>Colorama: Allows you to use colors in your output.
+                                    <pre>
+                                        <img src="img/colorama.png"/>
+        <a href="code/colorama_code.py">Click here to download the sample code</a>
+                                    </pre>
+                                        But many a times this is not our use case and we want colors in out logs. This can be achieved using library <b>colorlogs</b>.<br/>
+                                        <img src="img/log_colors.png"/><a href="code/colorlogs_code.py">download code</a>
+                                    </li>
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" >Go somewhere</a>
+  </div>
+</div>                       </ol>
+                            </ol>
 
-                                </p>
-                            </div>
+                            </p>
                         </div>
-                        <div class="break"></div>
-                    </section><!-- content -->
                 </div>
+                <div class="break"></div>
+                </section><!-- content -->
             </div>
         </div>
-        <!-- End Tab Container -->
-        <footer>
-            <p>
-                Copyright &#x000A9;&nbsp;2017 &#x000B7; Akash Singh
-            </p>
-        </footer>
-    </div><!-- #main -->
+    </div>
+    <!-- End Tab Container -->
+    <footer>
+        <p>
+            Copyright &#x000A9;&nbsp;2017 &#x000B7; Akash Singh
+        </p>
+    </footer>
+</div><!-- #main -->
 </div><!-- #main-container -->
 
 
