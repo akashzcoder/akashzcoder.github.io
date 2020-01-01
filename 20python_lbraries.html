@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="nopjs lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Akash Singh</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-144x144-precomposed.png">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/vendor/jquery.hashchange.min.js"></script>
+    <script src="js/vendor/jquery.easytabs.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+</head>
+<body class="bg-fixed bg-1">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+<div class="main-container">
+    <div class="main wrapper clearfix">
+        <!-- Header Start -->
+        <header id="header">
+            <div id="logo">
+                <h2>
+                    Akash Singh
+                </h2>
+                <h4>
+                    Mathematician, Designer & Developer
+                </h4>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Main Tab Container -->
+        <div id="tab-container" class="tab-container">
+            <!-- Tab List -->
+            <ul class='etabs'>
+                <li class='tab' id="tab-about">
+                    <a href="#about"><i class="icon-user"></i><span>20 Python Libraries You Aren't Using!</span></a>
+                </li>
+            </ul>
+            <!-- End Tab List -->
+            <div id="tab-data-wrap">
+                <!-- About Tab Data -->
+                <div id="about">
+                    <section class="clearfix">
+                        <div>
+                            <div class="photo">
+                                <img src="img/20python_lib.png" alt="python" border="1" height="256" width="256">
+                            </div>
+                            <h2>
+                                20 Python Libraries You Aren't Using!
+                            </h2>
+                            <h6>
+                                Author: Akash Singh <br/>Date: December 20, 2019
+                            </h6>
+                            <br><br>
+                            <p style="color:black;font-size:18px;">
+                                I have been using Python for quite a while now, still learning a lot of simple and
+                                new things. Sometimes these simple things saves time and bring a lot of joy to me. I
+                                will be sharing a breif overview of the book:
+                            <blockquote><q>20 Python Libraries You Aren't Using
+                                (But Should)</q> - <b>Caleb Hattingh</b></blockquote>
+                            <p style="color:black;font-size:px;">This book primarily focuses on some of the
+                                lesser-known libraries from the third-party ecosystem.</p>
+                            <ol style="color:black;font-size:18px;">Libraries
+                                <li>Standard Library</li>16
+                                <ul style="color:black;font-size:18px;">
+                                    <li>collections.OrderedDict: gives you a <i>dict</i> that maintains the order of
+                                        insertion.
+                                    </li>
+                                    <li>collections.defaultdict: allows you to specify a default value to all new
+                                        keys.
+                                    </li>
+                                    For example:
+                                    <pre>
+                                            <code>
+            >>> import collections
+            >>> d = collections.defaultdict(list)
+            >>> d['random_key']
+            []  # output -> auto-initilized to list
+                                            </code>
+                                        </pre>
+                                    <li>collections.namedtuple: namedtuple incurs no extra runtime cost and can make
+                                        your much easier to read.
+                                    </li>
+                                    <pre>
+                                        <code>
+            >>> point = (1.0, 2.0)
+            >>> from collections import namedtuple
+            >>> point_using_named_tuple = namedtuple('Point', 'x_axis, y_axis')
+            >>> point_tuple = Point(x_axis=1.0, y_axis=2.0)
+            >>> point_tuple.x_axis
+            1.0
+                                        </code>
+                                    </pre>
+                                    <li>contextlib: context manager is what simplifies cleanup step. It is what you use
+                                        with the <i>with</i> statement. You can use the <i>contextmanager</i> decorator
+                                        from the contextlib libary to create your own context manager.
+                                    </li>
+                                    Though the default, “low level” way to make a context manager is to make a class
+                                    which follows the context management protocol, by implementing <i>__enter__</i> and
+                                    <i>__exit__</i> methods, the simplest way is using the contextmanager decorator from
+                                    the contextlib library, and invoking yield in your context manager function in
+                                    between the setup and teardown steps.
+                                    <pre>
+                                        <code>
+                                            @contextmanager
+
+                                        </code>
+                                    </pre>
+                                    <li>concurrent.futures:</li>
+                                    <li>logging</li>
+                                    <li>sched</li>
+                                </ul>
+                                <li>Command-Line Applications:</li>
+                                <ol>
+                                    <li>Colorama: Allows you to use colors in your output.
+                                    <pre>
+                                        <img src="img/colorama.png"/>
+        <a href="code/colorama_code.py">Click here to download the sample code</a>
+                                    </pre>
+                                        But many a times this is not our use case and we want colors in out logs. This can be achieved using library <b>colorlogs</b>.<br/>
+                                        <img src="img/log_colors.png"/><a href="code/colorlogs_code.py">download code</a>
+                                    </li>
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" >Go somewhere</a>
+  </div>
+</div>                       </ol>
+                            </ol>
+
+                            </p>
+                        </div>
+                </div>
+                <div class="break"></div>
+                </section><!-- content -->
+            </div>
+        </div>
+    </div>
+    <!-- End Tab Container -->
+    <footer>
+        <p>
+            Copyright &#x000A9;&nbsp;2017 &#x000B7; Akash Singh
+        </p>
+    </footer>
+</div><!-- #main -->
+</div><!-- #main-container -->
+
+
+</body>
+</html>
