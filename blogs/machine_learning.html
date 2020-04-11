@@ -68,7 +68,7 @@
             <p>I will start-off by writing some of the most commonly used design architectures:
             <ol>
                <li>
-                  <b>Reactive Style:</b>
+                  <b>Reactive Architecture:</b>
                   Properties of a reactive system: <br>
                   <ul>
                      <li><i>Responsive:</i> A responsive system provides rapid and consistent response times, establishing reliable upper bounds so they deliver reliable quality product.</li>
@@ -76,7 +76,10 @@
                      <li><i>Elastic:</i> The system stays responsive under varying workload. </li>
                      <li><i>Message Driven:</i> Reactive Systems rely on asynchronous message-passing to establish a boundary between components that ensures loose coupling, isolation and location transparency. This boundary also provides the means to delegate failures as messages. Employing explicit message-passing enables load management, elasticity, and flow control by shaping and monitoring the message queues in the system and applying back-pressure when necessary. Location transparent messaging as a means of communication makes it possible for the management of failure to work with the same constructs and semantics across a cluster or within a single host. Non-blocking communication allows recipients to only consume resources while active, leading to less system overhead.</li>
                   </ul>
-                  <center><img src="./img/reactive_design.png" style="width:400%;max-width:400px"></center>
+                  <figure>
+                  <center><img src="./img/reactive_design.png" style="width:400%;max-width:400px">
+                     <figcaption>Fig.1 - Reactive Architecture</figcaption></center>
+                  </figure>
                </li>
                <br>
                <li>
@@ -97,8 +100,11 @@
                <li>
                   <b>Lambda Architecture:</b>
                   The Lambda (λ) Architecture is designed to handle both real-time and historically aggregated batched data in an integrated fashion. It separates the duties of real-time and batch processing while query layers present a unified view of all of the data. The concept is simple: When data is generated, it is processed before stored, so analysis can include data generated in the last second, the last minute, or the last hour by only processing the incoming data — not all the data.
-                  This is by far the most commonly used architecture
-                  <center><img src="./img/lambda.jpg" style="width:400%;max-width:400px"></center>
+                  This is by far the most commonly used architecture in machine learning where data is considered as the first class entity in the entire architecture. Shown below is the diagram reflective upon a superficial example of this setup.
+                  <figure>
+                  <center><img src="./img/lambda.jpg" style="width:400%;max-width:400px">
+                  <figcaption>Fig.2 - Lambda Architecture</figcaption></center>
+                  </figure>
                </li>
                <br>
                <li>
