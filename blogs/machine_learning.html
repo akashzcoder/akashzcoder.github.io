@@ -51,7 +51,7 @@
       <div class="w3-grayscale w3-large">
          <!-- About Container -->
          <div class="w3-container" id="about">
-            <p class="w3-content" style="max-width:800px">
+            <p class="w3-content" style="max-width:700px">
             <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ARCHITECTURE OF MACHINE LEARNING PIPELINE</span></h5>
             <p>Writing a working machine learning code does not guarantee a production ready system. This blog is about designing a machine learning prototype through the engineering road map. What you need is a team of professional Software Engineers by your side to take your (disposable) proof of concept and turn it into a performant, reliable, loosely coupled and scalable system!</p>
             <p>Given below is the roster of objectives that we need to build a production ready system:
@@ -66,82 +66,107 @@
             </ul>
             </p>
             <p>I will start-off by writing some of the most commonly used design architectures:
-            <ul>
+            <ol>
                <li>
                   <b>Reactive Style:</b>
-                  <p>Properties of a reactive system: <br>
+                  Properties of a reactive system: <br>
                   <ul>
                      <li><i>Responsive:</i> A responsive system provides rapid and consistent response times, establishing reliable upper bounds so they deliver reliable quality product.</li>
                      <li><i>Resilient:</i> The system stays responsive in case of failure. Resilience is achieved by replication, containment, isolation and delegation. Failures are contained within each component, isolating components from each other and thereby ensuring that parts of the system can fail and recover without compromising the system as a whole. Recovery of each component is delegated to another (external) component and high-availability is ensured by replication where necessary. The client of a component is not burdened with handling its failures.</li>
                      <li><i>Elastic:</i> The system stays responsive under varying workload. </li>
                      <li><i>Message Driven:</i> Reactive Systems rely on asynchronous message-passing to establish a boundary between components that ensures loose coupling, isolation and location transparency. This boundary also provides the means to delegate failures as messages. Employing explicit message-passing enables load management, elasticity, and flow control by shaping and monitoring the message queues in the system and applying back-pressure when necessary. Location transparent messaging as a means of communication makes it possible for the management of failure to work with the same constructs and semantics across a cluster or within a single host. Non-blocking communication allows recipients to only consume resources while active, leading to less system overhead.</li>
                   </ul>
-                  </p>
+                  <center><img src="./img/reactive_design.png" style="width:400%;max-width:400px"></center>
                </li>
+               <br>
                <li>
                   <b>Service Oriented Architecture (SOA):</b>
-                  <p>SOA centres around the concept of decomposing business problems into services. The services share information via the network and they also share code (i.e. common components) to maintain consistency and reduce development effort. <br>
+                  SOA centres around the concept of decomposing business problems into services. The services share information via the network and they also share code (i.e. common components) to maintain consistency and reduce development effort. <br>
                </li>
+               <br>
                <li>
-                  <b>Streaming Architecture: </b>
+                  <b>Streaming Architecture:</b>
+                  <ul>A streaming architecture comprises of the following components:
+                     <li><b>Producers:</b> Applications that generate and send messages</li>
+                     <li><b>Consumers:</b> Applications that subscribe to and consume messages</li>
+                     <li><b>Topics:</b> Streams of records belonging to a particular category and stored as a sequence of ordered and immutable records partitioned and replicated across a distributed cluster</li>
+                     <li><b>Stream Processors:</b> Applications that process messages in a certain manner (e.g. data transformations, ML models, etc).</li>
+                  </ul>
                </li>
-            </ul>
+               <br>
+               <li>
+                  <b>Lambda Architecture:</b>
+                  The Lambda (λ) Architecture is designed to handle both real-time and historically aggregated batched data in an integrated fashion. It separates the duties of real-time and batch processing while query layers present a unified view of all of the data. The concept is simple: When data is generated, it is processed before stored, so analysis can include data generated in the last second, the last minute, or the last hour by only processing the incoming data — not all the data.
+                  This is by far the most commonly used architecture
+                  <center><img src="./img/lambda.jpg" style="width:400%;max-width:400px"></center>
+               </li>
+               <br>
+               <li>
+                  <b>Microservice Architecture:</b>
+                  Microservices, is an architectural style that structures an application as a collection of small, autonomous, loosely coupled and collaborating services, modelled around a business domain. The services communicate using either synchronous protocols such as HTTP/REST or asynchronous protocols such as AMQP. They can be developed and deployed independently of one another. Each service has its own database in order to be decoupled from other services.
+               </li>
+            <br>
+               <li>
+                  <b>Representational State Transfer (REST) Architecture:</b>
+                  REST is an architectural style for developing web services and it builds upon existing features of the internet’s HTTP. It allows transferring, accessing and manipulating textual data representations, in a stateless manner i.e. applications can communicate agnostically. A RESTful API service is exposed through a Uniform Resource Locator (URL), which provides the capability of data being created, requested, updated, or deleted (CRUD). It is best used to manage systems by decoupling the information that is produced and consumed from the technologies that produce and consume it!
+               </li>
+            </ol>
             </p>
-            <div class="w3-panel w3-leftbar w3-light-grey">
-               <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-               <p>Chef, Coffeeist and Owner: Liam Brown</p>
-            </div>
-            <img src="/img/ml.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-            <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-            <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+<!--            <div class="w3-panel w3-leftbar w3-light-grey">-->
+<!--               <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>-->
+<!--               <p>Chef, Coffeeist and Owner: Liam Brown</p>-->
+<!--            </div>-->
+<!--            <img src="/img/ml.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">-->
+<!--            <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>-->
+<!--            <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>-->
          </div>
       </div>
-      <!-- Menu Container -->
-      <div class="w3-container" id="menu">
-         <div class="w3-content" style="max-width:700px">
-            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">FLASH CARDS</span></h5>
-            <div class="w3-row w3-center w3-card w3-padding">
-               <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-                  <div class="w3-col s6 tablink">Questions</div>
-               </a>
-               <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-                  <div class="w3-col s6 tablink">Answers</div>
-               </a>
-            </div>
-            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-               <h5>Bread Basket</h5>
-               <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
-               <br>
-               <h5>Honey Almond Granola with Fruits</h5>
-               <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
-               <br>
-               <h5>Belgian Waffle</h5>
-               <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p>
-               <br>
-               <h5>Scrambled eggs</h5>
-               <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
-               <br>
-               <h5>Blueberry Pancakes</h5>
-               <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
-            </div>
-            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-               <h5>Coffee</h5>
-               <p class="w3-text-grey">Regular coffee 2.50</p>
-               <br>
-               <h5>Chocolato</h5>
-               <p class="w3-text-grey">Chocolate espresso with milk 4.50</p>
-               <br>
-               <h5>Corretto</h5>
-               <p class="w3-text-grey">Whiskey and coffee 5.00</p>
-               <br>
-               <h5>Iced tea</h5>
-               <p class="w3-text-grey">Hot tea, except not hot 3.00</p>
-               <br>
-               <h5>Soda</h5>
-               <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-            </div>
-         </div>
-      </div>
+<!--      &lt;!&ndash; Menu Container &ndash;&gt;-->
+<!--      <div class="w3-container" id="menu">-->
+<!--         <div class="w3-content" style="max-width:700px">-->
+<!--            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">FLASH CARDS</span></h5>-->
+<!--            <div class="w3-row w3-center w3-card w3-padding">-->
+<!--               <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">-->
+<!--                  <div class="w3-col s6 tablink">Questions</div>-->
+<!--               </a>-->
+<!--               <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">-->
+<!--                  <div class="w3-col s6 tablink">Answers</div>-->
+<!--               </a>-->
+<!--            </div>-->
+<!--            <div id="Eat" class="w3-container menu w3-padding-48 w3-card">-->
+<!--               <h5>Bread Basket</h5>-->
+<!--               <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>-->
+<!--               <br>-->
+<!--               <h5>Honey Almond Granola with Fruits</h5>-->
+<!--               <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>-->
+<!--               <br>-->
+<!--               <h5>Belgian Waffle</h5>-->
+<!--               <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p>-->
+<!--               <br>-->
+<!--               <h5>Scrambled eggs</h5>-->
+<!--               <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>-->
+<!--               <br>-->
+<!--               <h5>Blueberry Pancakes</h5>-->
+<!--               <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>-->
+<!--            </div>-->
+<!--            <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">-->
+<!--               <h5>Coffee</h5>-->
+<!--               <p class="w3-text-grey">Regular coffee 2.50</p>-->
+<!--               <br>-->
+<!--               <h5>Chocolato</h5>-->
+<!--               <p class="w3-text-grey">Chocolate espresso with milk 4.50</p>-->
+<!--               <br>-->
+<!--               <h5>Corretto</h5>-->
+<!--               <p class="w3-text-grey">Whiskey and coffee 5.00</p>-->
+<!--               <br>-->
+<!--               <h5>Iced tea</h5>-->
+<!--               <p class="w3-text-grey">Hot tea, except not hot 3.00</p>-->
+<!--               <br>-->
+<!--               <h5>Soda</h5>-->
+<!--               <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </div>-->
       <!-- End page content -->
       </div>
       <!-- Footer -->
