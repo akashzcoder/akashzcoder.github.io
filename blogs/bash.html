@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+   <title>Akash Singh</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+   <style>
+      body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+      }
+      .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("./img/ml.jpg");
+      min-height: 75%;
+      }
+      .menu {
+      display: none;
+      }
+      .container{
+        width: 80%;
+         margin: auto;
+        }
+   </style>
+   <body>
+      <!-- Links (sit on top) -->
+      <div class="w3-top">
+         <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io" class="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#about" class="w3-button w3-block w3-black">ABOUT</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#resume" class="w3-button w3-block w3-black">RESUME</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#academicWriting" class="w3-button w3-block w3-black">BLOGS</a>
+            </div>
+         </div>
+      </div>
+      <div class="w3-grayscale w3-large">
+         <!-- About Container -->
+         <div class="w3-container container" id="about">
+            <p class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Master the Bash Shell</span></h5>
+            </p>
+
+             <p class="w3-content" style="max-width:900px">
+             <b>CORE BASH</b><br>
+             Bash is a shell program. Shell program is typically an executable binary which takes in input command and
+             translates those to system calls that can interact with Operating System API. Also, <it>bash</it> is not
+                 not the only kind of shell program. There are many variants to this:
+                 <ol class="w3-content" style="max-width:900px">
+                     <li>Thompson Shell - 1971,</li>
+                     <li>Bourne Shell (sh) - 1977,</li>
+                     <li>C shell (csh) - 1978, </li>
+                     <li>Bourne Again Shell (bash) - 1987, etc.</li>
+                </ol>
+             < class="w3-content" style="max-width:900px">
+             Bash is the most widely seen, used and available shell. However, it is still not unheard of to end up on
+                 servers that do not have bash!<br><br>
+                 <b>Globbing: </b>
+                 Regular expressions are patterns used to search for matching strings. Globs look similar and perform a
+                 similar function, but are not the same. That’s the key point to understand about globs vs regular expressions.
+                 For example: * -> zero or more characters, ? -> matches for any single character, [abd] -> matches for any character from a, b or d,
+                 [a-d] -> matches from any character between a to d.
+                 <br><br>
+                 <b>Quoting: </b> Single quotes and double quotes have different meanings in bash.
+                 Quoting changes the way bash can read the line, making it decide whether to take these characters and
+                 transform them into something else, or just leave them be. In other words, any expression inside the double
+                 quotes gets interpreted whilst no evaluation happens when single quote is used. There is no special meaning
+                 to any character in single quote.<br>
+                 Note: Globs are neither evaluated in double quotes nor in single quotes.<br><br>
+                 <b>Dotfile: </b> dot files are hidden files, It is used you want to have a file that sits
+                 alongside other files but that is generally ignored. For example, you might write some code that
+                 reformats a set of text files in a folder, but you don’t want to reformat a dotfile that contains
+                 information about what’s in those text files. You cannot use the command <em>ls *</em>: this command
+                 won't list hidden files instead we will have to use <em>ls .*</em>.<br><br>
+                <b>direct assignment VS export VS using .bash_profile</b> direct assignment of variables are accessible within
+                 a shell and as soon as a new shell is opened such variables will no longer be accessible. An alternate for
+                 accessing variables across multiple bash within the same shell is to use <em>export</em> command.
+                 For example, export LAST='Singh'. This command will be ensure the presence within the same terminal session.
+                 Still if access is needed across different terminals, use the <em>~/.bash_profile</em>(this file will
+                 change based on the version of shell being used). Write <em>export LAST=Singh</em> in .bahs_profile file.
+                 Since this file is loaded on every new terminal launch, therefore all the variables gets exported in every new terminal.
+                 Other interesting commands include: <b>env</b> which is used to display all the environment variables,
+                 <b>compgen -v</b> is used to print all the variables in the env. Although, the main use of compgen command is to
+                 display any autocomplete command in terminal including the variables, for example <em>-v</em> is used with this command to print all
+                 the variables.
+                 <br><br>
+                 <b>Functions: </b> Syntax of function is as shown below: <br>
+                 $function testfx {<br>
+                 >    &nbsp;&nbsp;&nbsp;echo $1<br>
+                 >    &nbsp;&nbsp;&nbsp;echo $2<br>
+                 >}<br>
+                 Scope of variables are same as how it would behave whilst you use these instructions over a shel without the
+                 method. However, on occasions where local variables are needed we can set those inside the function using the
+                 keyword local. When a key local is used before a variable, its scope is limited to the function and the variables
+                 will not impact the execution outside the method. <br><br>
+                 <b>Builtins: </b> Builtins are commands that come ‘built in’ to the bash shell program. Normally you
+                 can’t easily tell the difference between a builtin, a program or a function. The best way to distinguish
+                 is to type builtin and one of those next to it. For instance if there is a function that you wrote with
+                 the same name as a builtin, then the best way to call the builtin is by typing builtin followed by the
+                 bash command.
+                 <br><br>
+                 <b>Aliases: </b> Finally there are aliases. Aliases are strings that the shell takes and translates to whatever
+                 that string is aliased to. Aliases take precedence over builtins.<br><br>
+                 <b>Redirects: </b> Lets look at some examples, its simpler that way: <br>
+                 <em>echo "contents of file1" > file1</em><br>
+                 The <em>></em> character is the redirect operator. This takes the output from the preceding command that you’d normally see in the terminal and sends it to a file that you give it.
+                 Here it creates a file called file1 and puts the echoed string into it.<br><br>
+                 <b>Pipes: </b> Lets look an example:<br>
+                    <em>cat file1 | grep -c file</em>
+                 Normally you’d run a grep with the filename as the last argument, but instead here we pipe the contents of file1 into the grep command by using the ‘pipe’ operator: |.
+                The resulting output of 1 indicates the number lines that matched the word file in the the file called file1.
+                These are the numbered file descriptors, and the first three are assigned to the numbers 0,1 and 2.
+                0 is standard input,
+                1 is standard output, and
+                2 is standard error
+
+
+
+
+             </p>
+            </p>
+
+         </div>
+      </div>
+      </div>
+      <!-- Footer -->
+      <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+         <p>
+            Copyright &#x000A9;&nbsp;2020 &#x000B7; Akash Singh
+         </p>
+      </footer>
+      <script>
+         // Tabbed Menu
+         function openMenu(evt, menuName) {
+           var i, x, tablinks;
+           x = document.getElementsByClassName("menu");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tablink");
+           for (i = 0; i < x.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+           }
+           document.getElementById(menuName).style.display = "block";
+           evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+         }
+         document.getElementById("myLink").click();
+      </script>
+   </body>
+</html>
