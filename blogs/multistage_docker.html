@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+   <title>Akash Singh</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+   <style>
+      body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+      }
+      .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("./img/ml.jpg");
+      min-height: 75%;
+      }
+      .menu {
+      display: none;
+      }
+      .container{
+        width: 80%;
+         margin: auto;
+        }
+      .code {
+          background-color: #eee;
+          border-radius: 3px;
+          font-family: courier, monospace;
+          padding: 0 3px;
+      }
+      .boxed {
+          border: 1px solid green ;
+      }
+   </style>
+   <body>
+      <!-- Links (sit on top) -->
+      <div class="w3-top">
+         <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io" class="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#about" class="w3-button w3-block w3-black">ABOUT</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#resume" class="w3-button w3-block w3-black">RESUME</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#academicWriting" class="w3-button w3-block w3-black">BLOGS</a>
+            </div>
+         </div>
+      </div>
+      <div class="w3-grayscale w3-large">
+         <!-- About Container -->
+         <p class="w3-container container" id="about">
+            <p class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Multi-stage  Docker files</span></h5>
+            </p>
+
+             <p class="w3-content" style="max-width:900px">
+             Multistage docker files are one way to handle large images using multi-stage Dockerfiles.
+
+             The problem with the Dcoker image is that they are massive in size! This is because it contains the build tools we don’t need. Also, it contains the source code and intermediate build artifacts again we don't need this, at least not in production.
+             We could use the RUN command to try and clean the image; delete intermediate build artifacts, uninstall build tools, and delete source code, but that would be tedious. Remember that containers are like cheap, disposable machines; let’s dispose of the build machine and grab a brand new one that has only the runtime installed!
+                 Docker has a neat way to do this; use a single Dockerfile file with distinct sections. An image can be named simply by adding AS at the end of the FROM instruction. Consider the following simplified Dockerfile file:
+                 <code>
+                     <br>
+
+
+                     <div class="w3-container container"    style="width:500px;height:400   px;border:1px solid #000;">
+                        <b>Dockerfile</b>
+                         <br>
+                        FROM fat-image AS builder
+                         <br>
+                        ...
+                        <br>
+                        FROM small-image
+                         <br>
+                        COPY --from=builder /result .
+                         <br>
+                        ...
+                         <br>
+
+                     </div>
+                 </code><br>
+            <p class="w3-content" style="max-width:900px">
+               It defines two images, but only the last one will be kept as a result of the docker build command.
+               The filesystem that has been created in the first image, named builder, is made available to the second
+             image using the <i>--from</i> argument of the <i>COPY</i> command. It states that the /result folder from the builder
+               image will be copied to the current working directory of the second image.
+               This technique allows you to benefit from the tools available in fat-image while getting an image with only the environment defined in the small-image it’s based on. Moreover, you can have many stages in a Dockerfile file when necessary.
+               <br>Here is an example:
+          <i>Copied from <a href="https://docs.docker.com/develop/develop-images/multistage-build/">Docker docs</a></i></p>
+             <div class="w3-container container"    style="width:500px;height:1000   px;border:1px solid #000;">
+             <b>Dockerfile</b><br>
+                FROM golang:1.7.3<br>
+                WORKDIR /go/src/github.com/alexellis/href-counter/<br>
+                RUN go get -d -v golang.org/x/net/html  <br>
+                COPY app.go .<br>
+                RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .<br>
+                <br>
+                FROM alpine:latest  <br>
+                RUN apk --no-cache add ca-certificates<br>
+                WORKDIR /root/<br>
+                COPY --from=0 /go/src/github.com/alexellis/href-counter/app .<br>
+                CMD ["./app"]  <br>
+         </div>
+             <p class="w3-content" style="max-width:900px">
+
+            When I build an image from that multi-stage definition, I get a 91% improvement over the image size!
+             When you create an image, you want it to be as small as possible for several reasons:
+                <ul class="w3-content" style="max-width:900px">
+                    <li>Reduce pull and push times</li>
+                    <li>Use a minimum amount of space in the Registry</li>
+                    <li>Use a minimum amount of space on the machines that will run the containers</li>
+                    <li>Use a minimum amount of space on the machine that creates the image</li>
+                </ul>
+          <p class="w3-content" style="max-width:900px">
+                 You want to produce small images or if you plan to generate artifacts inside Docker, make sure to use multi-stage Dockerfile files.
+      </p>
+          </p>
+          </p>
+
+
+            </p>
+
+         </div>
+      </div>
+      </div>
+      <!-- Footer -->
+      <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+         <p>
+            Copyright &#x000A9;&nbsp;2020 &#x000B7; Akash Singh
+         </p>
+      </footer>
+      <script>
+         // Tabbed Menu
+         function openMenu(evt, menuName) {
+           var i, x, tablinks;
+           x = document.getElementsByClassName("menu");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tablink");
+           for (i = 0; i < x.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+           }
+           document.getElementById(menuName).style.display = "block";
+           evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+         }
+         document.getElementById("myLink").click();
+      </script>
+   </body>
+</html>
