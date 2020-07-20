@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+   <title>Akash Singh</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+   <style>
+      body, html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+      }
+      .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("./img/ml.jpg");
+      min-height: 75%;
+      }
+      .menu {
+      display: none;
+      }
+      .container{
+      width: 80%;
+      margin: auto;
+      }
+      .code {
+      background-color: #eee;
+      border-radius: 3px;
+      font-family: courier, monospace;
+      padding: 0 3px;
+      }
+      .boxed {
+      border: 1px solid green ;
+      }
+   </style>
+   <body>
+      <!-- Links (sit on top) -->
+      <div class="w3-top">
+         <div class="w3-row w3-padding w3-black">
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io" class="w3-button w3-block w3-black">HOME</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#about" class="w3-button w3-block w3-black">ABOUT</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#resume" class="w3-button w3-block w3-black">RESUME</a>
+            </div>
+            <div class="w3-col s3">
+               <a href="https://akashzcoder.github.io/#academicWriting" class="w3-button w3-block w3-black">BLOGS</a>
+            </div>
+         </div>
+      </div>
+      <div class="w3-grayscale w3-large">
+         <!-- About Container -->
+         <p class="w3-container container" id="about">
+         <p class="w3-content" style="max-width:700px">
+         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Docker Volumes</span></h5>
+         </p>
+         <p class="w3-content" style="max-width:900px">
+            When a container writes files, it writes them inside of the container.
+             Which means that when the container dies (the host machine restarts or the container is moved from one node
+             to another in a cluster, it simply fails, etc.) all of that data is lost. It also means that if you run the
+             same container several times in a load-balancing scenario, each container will have its own data, which may
+             result in inconsistent user experience.<br><br>
+          A rule of thumb for the sake of simplicity is to ensure that containers are stateless, for instance, storing
+             their data in an external database (relational like an SQL Server or document-based like MongoDB) or
+             distributed cache (like Redis). However, sometimes you want to store files in a place where they are
+             persisted; this is done using volumes.
+          <br><br>
+          Using a volume, you map a directory inside the container to a persistent storage. Persistent storages are
+             managed through drivers, and they depend on the actual Docker host. They may be an Azure File Storage on
+             Azure or Amazon S3 on AWS. With Docker Desktop, you can map volumes to actual directories on the host system;
+             this is done using the -v switch on the docker run command or if you are using Docker-compose you can simply
+          set the volume there.
+        <br><br>
+          Suppose you run a Oracle database with no volume:<br>
+             <code>docker run -d oraclelinux:7-slim</code>
+        <br>
+             Any data stored in that database will be lost when the container is stopped or restarted.
+             In order to avoid data loss, you can use a volume mount:<br>
+             <code>
+                docker run -v /your/dir:/var/lib/oraclelinux -d oraclelinux:7-slim
+             </code><br>
+             <br>
+             It will ensure that any data written to the <i>/var/lib/oraclelinux</i> directory inside the container is actually
+             written to the <i>/your/dir</i> directory on the host system.
+             This ensures that the data is not lost when the container is restarted.
+             Another very big advantage is that it allows to edit the code inside your volume which takes effect upon
+             restarting the container. This means that we can actually make code changes persistent.
+
+         </p>
+      </div>
+      </div>
+      </div>
+      <!-- Footer -->
+      <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+            <blockquote>
+        <cite>References:<br> [1] <a href="https://docs.docker.com/develop/develop-images/multistage-build/">https://docs.docker.com/develop/develop-images/multistage-build/</a></cite>
+</blockquote>
+         <p>
+            Copyright &#x000A9;&nbsp;2020 &#x000B7; Akash Singh
+         </p>
+      </footer>
+      <script>
+         // Tabbed Menu
+         function openMenu(evt, menuName) {
+           var i, x, tablinks;
+           x = document.getElementsByClassName("menu");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("tablink");
+           for (i = 0; i < x.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+           }
+           document.getElementById(menuName).style.display = "block";
+           evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+         }
+         document.getElementById("myLink").click();
+      </script>
+
+   </body>
+</html>
